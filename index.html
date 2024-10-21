@@ -14,31 +14,53 @@
             color: #333;
         }
         header {
-            text-align: center;
-            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
             background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #fff;
         }
-        h1 {
-            margin: 0;
-            font-size: 3em;
+        .social-icons img {
+            width: 36px;
+            height: 36px;
+            margin-left: 10px;
         }
-        h2 {
-            color: #6a11cb;
-            border-bottom: 2px solid #2575fc;
-            padding-bottom: 10px;
+        .button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        p, ul {
-            line-height: 1.6;
+        .button:hover {
+            background-color: #2575fc;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .section {
             max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
+            width: 100%;
+            margin: 20px 0;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
-        ul {
-            list-style-type: square;
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .grid div {
+            flex: 1 1 45%;
+            margin: 10px;
         }
         footer {
             margin-top: 40px;
@@ -48,81 +70,74 @@
             color: #fff;
             border-radius: 8px;
         }
-        .social-icons img {
-            width: 36px;
-            height: 36px;
-            margin: 0 10px;
-        }
-        button {
-            background-color: #6a11cb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #2575fc;
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Artist Statement</h1>
-    </header>
-
-    <p>
-        As an artist, I explore the boundaries between traditional and unconventional techniques, constantly seeking to reimagine the creative process. My practice spans painting, sculpture, and most recently, software development, though I do not approach any of these mediums in a conventional way. Without formal training in art, I embrace my position as an outsider, which allows me to break the rules with intention. I know art history well and have taught painting and drawing, but my fascination lies in reinterpreting established methods and pushing the limits of what constitutes art.
-    </p>
-    <p>
-        The uncanny and the potential of form captivate me. In my work, I focus on transforming materials, tools, and processes, often subverting expectations in the way I engage with them. For example, I explore how the process of making art can be augmented or even replaced by technology. This has led me to develop software that interprets the relationship between color, form, and sound, allowing users to engage with art in ways that are simultaneously familiar and alien.
-    </p>
-    <p>
-        One of my latest projects merges color theory with digital tools. Through an app I created, users can upload images and translate color palettes into paint blends using a custom Java-based algorithm. This project is part of my larger exploration into the intersection of technology and art, where code becomes a new medium for creativity. I see this as a continuation of my broader inquiry into form, process, and the unknown spaces in between.
-    </p>
-    <p>
-        I am drawn to the notion of art as an evolving practice—one that is not confined by traditional methods, but instead constantly expanding to include new forms of engagement, experimentation, and interaction.
-    </p>
-
-    <h2>About</h2>
-    <p>
-        Degree in IT, post-grad in teaching, art school drop out. Working in tech.
-    </p>
-
-    <h2>Art Exhibitions</h2>
-    <ul>
-        <li>Work / Force / Field /, curated by Lisa Crowne, 2023, A4 Sounds Gallery, Dublin. (Copper woven ash frame with patina)</li>
-        <li>Re-emerging, Bishopstown Library, Cork, 2023. (A Bale of Horses with Cork Textiles Network. Photography, cotton, acrylic. 210 x 297 mm.)</li>
-        <li>Alchemical Vessels, Curated by Conor Burke, 126 Gallery, Galway, 2023. (A Prying of Prayers, a copper and cotton woven vessel.)</li>
-        <li>Fanfare, MTU Cork School of Music, 2021. (An Ash of Bodies. copper and wool tapestry)</li>
-    </ul>
-
-    <h2>Work in Permanent Collections</h2>
-    <p>
-        MTU Cork School of Music with a copper and wool tapestry – An Ash of Bodies.
-    </p>
-
-    <h2>Prizes / Nominations / Professional Membership</h2>
-    <ul>
-        <li>Tipperary Artist Award 2023 recipient</li>
-        <li>Member of Sample Studios</li>
-        <li>Shortlisted for The James Tate Prize with Survision Press September 2021</li>
-        <li>Nominated for a Pushcart Prize by Dream Journal (USA) November 2020</li>
-        <li>Member of Visual Artists Ireland</li>
-        <li>Member of The Design and Crafts Council Ireland</li>
-        <li>Poets & Writers Directory</li>
-    </ul>
-
-    <footer>
         <div>
-            <button onclick="window.location.href='https://mimoki1.github.io/TechPaletteMentor/app.html'">Tech Palette Mentor App</button>
+            <button class="button" onclick="window.location.href='https://mimoki1.github.io/TechPaletteMentor/app.html'">Tech Palette Mentor App</button>
         </div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/mmyking1/" target="_blank"><img src="instagram(1).png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/mmyking1/" target="_blank" title="See my work"><img src="instagram(1).png" alt="Instagram"></a>
             <a href="https://www.linkedin.com/in/michelleking1/" target="_blank"><img src="icons8-linkedin-48.png" alt="LinkedIn"></a>
         </div>
+    </header>
+
+    <main>
+        <div class="section">
+            <h1>Artist Statement</h1>
+            <p>
+                As an artist, I explore the boundaries between traditional and unconventional techniques, constantly seeking to reimagine the creative process. My practice spans painting, sculpture, and most recently, software development, though I do not approach any of these mediums in a conventional way. Without formal training in art, I embrace my position as an outsider, which allows me to break the rules with intention. I know art history well and have taught painting and drawing, but my fascination lies in reinterpreting established methods and pushing the limits of what constitutes art.
+            </p>
+            <p>
+                The uncanny and the potential of form captivate me. In my work, I focus on transforming materials, tools, and processes, often subverting expectations in the way I engage with them. For example, I explore how the process of making art can be augmented or even replaced by technology. This has led me to develop software that interprets the relationship between color, form, and sound, allowing users to engage with art in ways that are simultaneously familiar and alien.
+            </p>
+            <p>
+                One of my latest projects merges color theory with digital tools. Through an app I created, users can upload images and translate color palettes into paint blends using a custom Java-based algorithm. This project is part of my larger exploration into the intersection of technology and art, where code becomes a new medium for creativity. I see this as a continuation of my broader inquiry into form, process, and the unknown spaces in between.
+            </p>
+            <p>
+                I am drawn to the notion of art as an evolving practice—one that is not confined by traditional methods, but instead constantly expanding to include new forms of engagement, experimentation, and interaction.
+            </p>
+        </div>
+
+        <div class="section grid">
+            <div>
+                <h2>About</h2>
+                <p>Degree in IT, post-grad in teaching, art school drop out. Working in tech.</p>
+            </div>
+            <div>
+                <h2>Work in Permanent Collections</h2>
+                <p>MTU Cork School of Music with a copper and wool tapestry – An Ash of Bodies.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Art Exhibitions</h2>
+            <ul>
+                <li>Work / Force / Field /, curated by Lisa Crowne, 2023, A4 Sounds Gallery, Dublin. (Copper woven ash frame with patina)</li>
+                <li>Re-emerging, Bishopstown Library, Cork, 2023. (A Bale of Horses with Cork Textiles Network. Photography, cotton, acrylic. 210 x 297 mm.)</li>
+                <li>Alchemical Vessels, Curated by Conor Burke, 126 Gallery, Galway, 2023. (A Prying of Prayers, a copper and cotton woven vessel.)</li>
+                <li>Fanfare, MTU Cork School of Music, 2021. (An Ash of Bodies. copper and wool tapestry)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Prizes / Nominations / Professional Membership</h2>
+            <ul>
+                <li>Tipperary Artist Award 2023 recipient</li>
+                <li>Member of Sample Studios</li>
+                <li>Shortlisted for The James Tate Prize with Survision Press September 2021</li>
+                <li>Nominated for a Pushcart Prize by Dream Journal (USA) November 2020</li>
+                <li>Member of Visual Artists Ireland</li>
+                <li>Member of The Design and Crafts Council Ireland</li>
+                <li>Poets & Writers Directory</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name. All rights reserved. Click on my Instagram to see my work!</p>
     </footer>
 
 </body>
