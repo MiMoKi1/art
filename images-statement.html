@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michelle King's Art</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon link -->
     <style>
         * {
             margin: 0;
@@ -15,8 +15,8 @@
         html, body {
             width: 100%;
             height: 100%;
-            overflow: auto; /* Enables scrolling for the whole page */
-            background-color: #000; /* Black background */
+            margin: 0;
+            overflow: hidden; /* Prevents scrolling */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,9 +24,9 @@
         }
 
         img {
-            width: 80%; /* Adjust the size of the image */
-            height: auto;
-            display: block;
+            width: 80vw; /* 80% of the screen width */
+            height: 80vh; /* 80% of the screen height */
+            object-fit: contain; /* Maintains the image aspect ratio */
         }
 
         .top-links {
@@ -39,7 +39,7 @@
         }
 
         .top-links a img {
-            height: 40px; /* Adjust size of the icons */
+            height: 40px; /* Size of the icons */
             width: auto;
         }
     </style>
@@ -56,7 +56,7 @@
         </a>
     </div>
 
-    <!-- Full-Page Image with Vertical Scrolling -->
+    <!-- Full-Page Image -->
     <img src="mmk-king-art.png" alt="Michelle King Art">
 
 </body>
