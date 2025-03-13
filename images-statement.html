@@ -12,21 +12,23 @@
             box-sizing: border-box;
         }
 
-        html, body {
+       html, body {
             width: 100%;
             height: 100%;
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align to the top */
             position: relative;
-            overflow: hidden; /* Prevents scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         img {
-            width: 100vw; /* 100% of the screen width */
-            height: 100vh; /* 100% of the screen height */
+            width: 80vw; /* 80% of the viewport width */
+            height: auto; /* Height scales proportionally */
             object-fit: contain; /* Maintains aspect ratio */
+            margin-top: 20px; /* Optional: Add some space at the top */
         }
 
         .top-links {
